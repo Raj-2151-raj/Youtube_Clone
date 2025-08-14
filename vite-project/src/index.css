@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@layer base {
+  * {
+    @apply m-0 p-0 box-border font-[Poppins,sans-serif];
+  }
+  a {
+    @apply no-underline text-[#5a5a5a];
+  }
+  img {
+    @apply cursor-pointer;
+  }
+}
