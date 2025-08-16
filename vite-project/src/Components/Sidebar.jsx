@@ -63,13 +63,20 @@ const Sidebar = ({ sidebar }) => {
           </p>
         </div>
 
-        <div className="flex items-center mb-[20px] w-fit flex-wrap cursor-pointer">
-          <img className="w-5 mr-5 rounded-full" src={tech} alt="" />
-          <p className={`transition-all duration-300 overflow-hidden
-            ${sidebar ? "opacity-100 ml-2 w-auto" : "opacity-0 ml-0 w-0"}`}>
-            Tech
-          </p>
-        </div>
+     <div className="flex items-center mb-[20px] w-fit flex-wrap cursor-pointer">
+  {/* Img नेहमी दिसणार, पण md नंतर sidebar बंद असेल तर फक्त img राहील */}
+  <img className="w-5 mr-5 rounded-full" src={tech} alt="Tech" />
+
+  {/* Menu Text */}
+  <p
+    className={`transition-all duration-300 overflow-hidden
+      ${sidebar ? "opacity-100 ml-2 w-auto" : "opacity-0 ml-0 w-0"} 
+      ${!sidebar && "hidden sm:inline-block"} // sm वर open नसेल तर hide
+    `}
+  >
+    Tech
+  </p>
+</div>
 
         <div className="flex items-center mb-[20px] w-fit flex-wrap cursor-pointer">
           <img className="w-5 mr-5 rounded-full" src={music} alt="" />
