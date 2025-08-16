@@ -7,14 +7,19 @@ import more from '../assets/more.png';
 import notification from '../assets/notification.png';
 import profile from '../assets/jack.png';
 
-const Navbar = () => {
+const Navbar = ({ setSidebar }) => {
   return (
     <div className="m-0 p-0 box-border font-[Poppins,sans-serif]">
       <nav className="flex items-center justify-between px-4 py-2 shadow-md">
         
         {/* Left Section */}
         <div className="flex items-center gap-4">
-          <img className="cursor-pointer w-6" src={menu_icon} alt="Menu" />
+          <img
+            className="cursor-pointer w-6"
+            onClick={() => setSidebar(prev => prev === false ? true : false)}
+            src={menu_icon}
+            alt="Menu"
+          />
           <img className="cursor-pointer w-24" src={logo} alt="Logo" />
         </div>
 
