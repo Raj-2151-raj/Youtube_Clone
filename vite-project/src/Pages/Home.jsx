@@ -4,15 +4,17 @@ import Feed from '../Components/feed';
 
 const Home = ({ sidebar }) => {
   return (
-    <div className="flex">
-      {/* Sidebar */}
-      <Sidebar sidebar={sidebar} />
+    <div>
+  <Sidebar sidebar={sidebar} />
+  <div
+    className={`transition-all duration-300 ${
+      sidebar ? "ml-[15%] w-[85%]" : "ml-[5%] w-[95%]"
+    }`}
+  >
+    <Feed />
+  </div>
+</div>
 
-      {/* Feed */}
-      <div className={`flex-1 p-4 ${sidebar ? "ml-0" : "ml-[80px]"}`}>
-        <Feed />
-      </div>
-    </div>
   )
 }
 

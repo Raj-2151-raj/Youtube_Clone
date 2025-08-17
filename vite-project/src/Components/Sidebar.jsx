@@ -18,8 +18,8 @@ import './sidebar.css';
 const Sidebar = ({ sidebar }) => {
   return (
     <div  
-      className={`w-[15%] h-screen   left-0 pl-[2%] pt-[20px] 
-       ${sidebar ? "" : "small-sidebar"}`}
+     className={`fixed top-0 left-0 h-screen bg-white shadow-md transition-all duration-300 
+    ${sidebar ? "w-[15%] pl-[2%]" : "w-[5%] pl-[1%]"} pt-[60px]`}
     >
       <div className=''>
         {/* Menu items */}
@@ -64,7 +64,7 @@ const Sidebar = ({ sidebar }) => {
         </div>
 
      <div className="flex items-center mb-[20px] w-fit flex-wrap cursor-pointer">
-  {/* Img नेहमी दिसणार, पण md नंतर sidebar बंद असेल तर फक्त img राहील */}
+  
   <img className="w-5 mr-5 rounded-full" src={tech} alt="Tech" />
 
   {/* Menu Text */}
@@ -104,7 +104,7 @@ const Sidebar = ({ sidebar }) => {
 
          <hr
          className={`border-0 h-px bg-gray-700 my-4 transition-all duration-300
-         ${sidebar ? "w-[180px] opacity-100 ml-2" : "w-[34px] opacity-50 ml-0"}`}/>
+         ${sidebar ? "w-[160px] opacity-100 ml-2" : "w-[30px] opacity-50 ml-0"}`}/>
        </div>
 
       {/* Subscribed */}
@@ -113,7 +113,7 @@ const Sidebar = ({ sidebar }) => {
         ${sidebar ? "opacity-100 max-w-[200px] ml-2" : "opacity-0 max-w-0 ml-0"}`}>Subscribed</h3>
 
       <div className="flex items-center mb-[20px] cursor-pointer overflow-hidden">
-  <img className="w-5 rounded-full" src={jack} alt="" />
+  <img className="w-5 mr-2 rounded-full" src={jack} alt="" />
   <div className="overflow-hidden">
     <p
       className={`transition-all duration-300 whitespace-nowrap

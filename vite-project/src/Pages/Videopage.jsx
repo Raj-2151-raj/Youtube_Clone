@@ -1,14 +1,14 @@
 // src/Pages/VideoPage.jsx
 import { useParams } from "react-router-dom";
+import PlayVideo from "../Components/PlayVideo";
 
 export default function VideoPage() {
-  const { categoryId, videoId } = useParams();
+  const { categoryId, videoId, extra } = useParams();
+
 
   return (
     <div>
-      <h1>Video Page</h1>
-      <p>Category ID: {categoryId}</p>
-      <p>Video ID: {videoId}</p>
+      <PlayVideo />
     </div>
   );
 }

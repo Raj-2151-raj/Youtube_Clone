@@ -28,7 +28,7 @@ const Feed = () => {
       sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {videoList.map((video, index) => (
   <Link
-    to={`/video/programming/${index}`}
+    to={`/video/:categoryId/:videoId/${index}`}
     key={index}
     className="card bg-white rounded-xl shadow hover:shadow-lg transition p-2"
   >

@@ -10,13 +10,13 @@ import profile from '../assets/jack.png';
 const Navbar = ({ setSidebar }) => {
   return (
     <div className="m-0 p-0 box-border font-[Poppins,sans-serif]">
-      <nav className="flex items-center justify-between px-4 py-2 shadow-md">
+      <nav className="fixed top-0 left-0 w-full h-[60px] bg-white flex items-center justify-between px-4 shadow-md z-50">
         
         {/* Left Section */}
         <div className="flex items-center gap-4">
           <img
             className="cursor-pointer w-6"
-            onClick={() => setSidebar(prev => prev === false ? true : false)}
+            onClick={() => setSidebar(prev => !prev)}
             src={menu_icon}
             alt="Menu"
           />
@@ -43,6 +43,9 @@ const Navbar = ({ setSidebar }) => {
           <img className="cursor-pointer w-8 rounded-full" src={profile} alt="Profile" />
         </div>
       </nav>
+
+      {/* spacer div for avoiding content hide behind navbar */}
+      <div className="h-[60px]"></div>
     </div>
   );
 };
