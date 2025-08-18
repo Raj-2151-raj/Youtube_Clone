@@ -13,8 +13,7 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<Home sidebar={sidebar} />} />
-        <Route path="/video/:categoryId/:videoId/:extra" element={<VideoPage />} />
-
+        <Route path="/video/:categoryId/:videoId" element={<VideoPage />} />
       </Routes>
     </>
   );
